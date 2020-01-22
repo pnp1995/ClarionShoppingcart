@@ -1,0 +1,13 @@
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Repository\bin\Debug\netcoreapp2.1\Repository.deps.json
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Repository\bin\Debug\netcoreapp2.1\Repository.runtimeconfig.json
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Repository\bin\Debug\netcoreapp2.1\Repository.runtimeconfig.dev.json
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Repository\bin\Debug\netcoreapp2.1\Repository.dll
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Repository\bin\Debug\netcoreapp2.1\Repository.pdb
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Repository\bin\Debug\netcoreapp2.1\Common.dll
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Repository\bin\Debug\netcoreapp2.1\Common.pdb
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Repository\obj\Debug\netcoreapp2.1\Repository.csprojAssemblyReference.cache
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Repository\obj\Debug\netcoreapp2.1\Repository.AssemblyInfoInputs.cache
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Repository\obj\Debug\netcoreapp2.1\Repository.AssemblyInfo.cs
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Repository\obj\Debug\netcoreapp2.1\Repository.csproj.CopyComplete
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Repository\obj\Debug\netcoreapp2.1\Repository.dll
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Repository\obj\Debug\netcoreapp2.1\Repository.pdb

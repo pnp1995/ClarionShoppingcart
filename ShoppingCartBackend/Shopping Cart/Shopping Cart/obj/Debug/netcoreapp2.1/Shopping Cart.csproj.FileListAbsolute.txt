@@ -1,0 +1,16 @@
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Shopping Cart\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Shopping Cart\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Shopping Cart\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Shopping Cart\bin\Debug\netcoreapp2.1\Shopping Cart.deps.json
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Shopping Cart\bin\Debug\netcoreapp2.1\Shopping Cart.runtimeconfig.json
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Shopping Cart\bin\Debug\netcoreapp2.1\Shopping Cart.runtimeconfig.dev.json
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Shopping Cart\bin\Debug\netcoreapp2.1\Shopping Cart.dll
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Shopping Cart\bin\Debug\netcoreapp2.1\Shopping Cart.pdb
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Shopping Cart\obj\Debug\netcoreapp2.1\Shopping Cart.csprojAssemblyReference.cache
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Shopping Cart\obj\Debug\netcoreapp2.1\Shopping Cart.RazorAssemblyInfo.cache
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Shopping Cart\obj\Debug\netcoreapp2.1\Shopping Cart.RazorAssemblyInfo.cs
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Shopping Cart\obj\Debug\netcoreapp2.1\Shopping Cart.AssemblyInfoInputs.cache
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Shopping Cart\obj\Debug\netcoreapp2.1\Shopping Cart.AssemblyInfo.cs
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Shopping Cart\obj\Debug\netcoreapp2.1\Shopping Cart.RazorTargetAssemblyInfo.cache
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Shopping Cart\obj\Debug\netcoreapp2.1\Shopping Cart.dll
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Shopping Cart\obj\Debug\netcoreapp2.1\Shopping Cart.pdb

@@ -1,0 +1,7 @@
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\BusinessManager\bin\Debug\netcoreapp3.1\BusinessManager.deps.json
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\BusinessManager\bin\Debug\netcoreapp3.1\BusinessManager.dll
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\BusinessManager\obj\Debug\netcoreapp3.1\BusinessManager.csprojAssemblyReference.cache
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\BusinessManager\obj\Debug\netcoreapp3.1\BusinessManager.AssemblyInfoInputs.cache
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\BusinessManager\obj\Debug\netcoreapp3.1\BusinessManager.AssemblyInfo.cs
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\BusinessManager\bin\Debug\netcoreapp3.1\BusinessManager.runtimeconfig.json
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\BusinessManager\bin\Debug\netcoreapp3.1\BusinessManager.runtimeconfig.dev.json

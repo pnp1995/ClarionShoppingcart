@@ -1,0 +1,7 @@
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Common\bin\Debug\netcoreapp3.1\Common.deps.json
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Common\bin\Debug\netcoreapp3.1\Common.dll
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Common\obj\Debug\netcoreapp3.1\Common.csprojAssemblyReference.cache
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfoInputs.cache
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfo.cs
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Common\bin\Debug\netcoreapp3.1\Common.runtimeconfig.json
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\Common\bin\Debug\netcoreapp3.1\Common.runtimeconfig.dev.json

@@ -1,0 +1,17 @@
+.card{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+   // border: 1px solid;
+}
+.cart{
+    display: flex;
+    justify-content: flex-end;
+    width: 78vw;
+}
+.mainCards{
+    display: flex;
+    justify-content: center;
+    // flex-direction: column;
+
+}

@@ -1,0 +1,13 @@
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\BusinessManager\bin\Debug\netcoreapp2.1\BusinessManager.deps.json
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\BusinessManager\bin\Debug\netcoreapp2.1\BusinessManager.dll
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\BusinessManager\bin\Debug\netcoreapp2.1\BusinessManager.pdb
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\BusinessManager\bin\Debug\netcoreapp2.1\Common.dll
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\BusinessManager\bin\Debug\netcoreapp2.1\Repository.dll
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\BusinessManager\bin\Debug\netcoreapp2.1\Repository.pdb
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\BusinessManager\bin\Debug\netcoreapp2.1\Common.pdb
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\BusinessManager\obj\Debug\netcoreapp2.1\BusinessManager.csprojAssemblyReference.cache
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\BusinessManager\obj\Debug\netcoreapp2.1\BusinessManager.AssemblyInfoInputs.cache
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\BusinessManager\obj\Debug\netcoreapp2.1\BusinessManager.AssemblyInfo.cs
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\BusinessManager\obj\Debug\netcoreapp2.1\BusinessManager.csproj.CopyComplete
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\BusinessManager\obj\Debug\netcoreapp2.1\BusinessManager.dll
+C:\Users\Priyanand Pritam\source\repos\Shopping Cart\BusinessManager\obj\Debug\netcoreapp2.1\BusinessManager.pdb

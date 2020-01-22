@@ -1,0 +1,22 @@
+.product{
+    width: 50%;
+    margin: auto;
+    height: 167px;
+}
+.cart{
+display: flex;
+justify-content: flex-end;
+}
+.wholecart{
+    display: flex;
+    flex-direction: row;
+    // border:1px solid;
+}
+.fullcart{
+    border: 1px solid;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 38%;
+    transform: translate(-50%,-50%);
+}
