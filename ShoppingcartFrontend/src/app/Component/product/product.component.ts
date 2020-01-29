@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/Service/Product/product.service';
 import { ActivatedRoute } from '@angular/router';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-product',
@@ -13,6 +14,9 @@ export class ProductComponent implements OnInit {
   cartData: any = [];
   totalamount: number;
   cartArray: any;
+  // show = false;
+  showLess_More : string = "SEE LESS...";
+  paasValueOn_SeeMoreBtn : Boolean = false;
   constructor(private productservice: ProductService, private route: ActivatedRoute) { }
   id;
   ngOnInit() {
@@ -71,12 +75,12 @@ export class ProductComponent implements OnInit {
     //   console.log(result);
     // });
   }
-  cartList() {
-    this.productservice.getCartlist().subscribe((response: any) => {
-      this.count = response.length;
-      console.log("cart", this.count);
-    })
-  }
+  // cartList() {
+  //   this.productservice.getCartlist().subscribe((response: any) => {
+  //     this.count = response.length;
+  //     console.log("cart", this.count);
+  //   })
+  // }
   getTotal() {
     let total = 0;
     for (var i = 0; i < this.cartData.length; i++) {
@@ -84,5 +88,20 @@ export class ProductComponent implements OnInit {
       this.totalamount = total;
     }
     return total;
+  }
+  showMore(data:boolean){
+    console.log(data);
+    if(data){
+      $("#dots").css('display', 'none');
+      $("#more").css('display', 'inline');
+      this.showLess_More = "SEE LESS ...";
+      this.paasValueOn_SeeMoreBtn = false;
+    }else{
+      $("#dots").css('display', 'inline');
+      $("#more").css('display', 'none');
+      this.showLess_More = "SEE MORE...";
+      this.paasValueOn_SeeMoreBtn = true; ;
+    }
+
   }
 }

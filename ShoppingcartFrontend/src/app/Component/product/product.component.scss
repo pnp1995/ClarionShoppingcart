@@ -19,4 +19,37 @@ justify-content: flex-end;
     left: 50%;
     top: 38%;
     transform: translate(-50%,-50%);
+    width: 42em;
+    height: 18em;
+    margin-top: 100px;
 }
+image{
+    width: 250px;        
+     border: 5px solid black;
+     max-width: 100%;
+     max-height: 100%;
+    display: block;
+    background-color: skyblue;
+    // height: 86px;border: 1px solid;width: 220em;
+}
+.container {
+     font-size: 15px;
+     line-height: 16px;
+     //height: 32px;
+    // overflow: hidden;
+}
+.show {
+    overflow: visible;
+    height: auto;
+}
+.SeeMore{
+    white-space: nowrap;
+    font-size: x-small;
+}
+#dots{
+    display: none;
+}
+// img {
+//     max-width: 100%;
+//     max-height: 100%;
+// }

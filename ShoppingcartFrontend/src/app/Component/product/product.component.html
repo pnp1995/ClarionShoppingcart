@@ -1,31 +1,45 @@
-<button mat-button routerLink="/dashboard" style="font-weight: bold;margin-left: 50px;background-color: cornflowerblue;">Back</button>
+<button mat-button routerLink="/dashboard"
+    style="font-weight: bold;margin-left: 50px;background-color: cornflowerblue;">Back</button>
 <div class="cart">
-    <mat-card style="border: 1px solid;margin-right: 135px; width: 60px;cursor: pointer;" routerLink="/cartlist">
-        <span matBadge="{{count}}"style="display: flow-root"  color="primary" >
-        <img src="../../../assets/cart.png" style="max-width: -webkit-fill-available;" (click)="cartList()">
+    <mat-card style="border: 1px solid;margin-right: 135px; width: 90px;cursor: pointer;" routerLink="/cartlist">
+        <span matBadge="{{count}}" style="display: flow-root" color="primary">
+            <img src="../../../assets/cart.png" style="max-width: -webkit-fill-available;" (click)="cartList()">
             <span>
                 ${{totalamount}}
-            </span> 
+            </span>
         </span>
     </mat-card>
 </div>
-<div class="fullcart" style="width:26em">
-    <div class="product">
-        <h4>{{productidArray[0].productName}}</h4>
-        <div class="wholecart">
-            <div style="height: 86px;border: 1px solid;width: 100px;">
-                <img src="{{productidArray[0].image}}" style="max-width: 100%;max-height: 100%;">
+<mat-card class="fullcart">
+    <div>
+        <div class="product">
+            <h4>{{productidArray[0].productName}}</h4>
+            <div class="wholecart">
+                <div class="image" class="img-fluid">
+                    <img *ngIf="productidArray[0].image" src="{{productidArray[0].image}}" class="img-responsive">
+                </div>
+                <div *ngIf="!productidArray[0].image" style="border: 1px solid;width: 150px;height: 150px;">No Image
+                </div>
+                <div>
+                    <ul>
+                        <li>Id- {{productidArray[0].productID}}</li>
+                        <li *ngIf="productidArray[0].description" id="dots">
+                            {{productidArray[0].description | slice:0:5}}
+                        </li>
+                        <span id="more">{{productidArray[0].description}}
+                        </span>
+                        <div>
+                            <button  class="btn" (click)="showMore(paasValueOn_SeeMoreBtn)">
+                                {{showLess_More}}
+                            </button>
+                        </div>
+                    </ul>
+                </div>
             </div>
-            <div>
-                <ul>
-                    <li>Id- {{productidArray[0].productID}}</li>
-                    <li>{{productidArray[0].description}}</li>
-                </ul>
-            </div>
-        </div>
-        <div>
-            <span>${{productidArray[0].price}}</span>
-            <button mat-flat-button (click)="addCart(productidArray[0])">+Add to cart</button>
         </div>
     </div>
+</mat-card>
+<div style="margin-top: 291px;margin-left: 460px;">
+    <span>${{productidArray[0].price}}</span>
+    <button mat-flat-button (click)="addCart(productidArray[0])">+Add to cart</button>
 </div>

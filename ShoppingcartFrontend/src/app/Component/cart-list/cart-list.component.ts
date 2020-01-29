@@ -24,12 +24,11 @@ export class CartListComponent implements OnInit {
   getDetails() {
     if (JSON.parse(localStorage.getItem('cartCount'))) {
       // this.cartArray = JSON.parse(localStorage.getItem('cartCount'))
-
       console.log("gasdf", this.cartArray);
       this.cartArray = JSON.parse(localStorage.getItem('cartCount'));
       this.count = this.cartArray.length;
       console.log(this.cartArray);
-
+      
       this.cartArray.forEach(element => {
         if (element.count === 0) {
           console.log(element);
@@ -60,14 +59,11 @@ export class CartListComponent implements OnInit {
       item.count = 1;
       this.cartArray.push(item);
     }
-
     localStorage.setItem('cartCount', JSON.stringify(this.cartArray));
-
     // this.count = this.cartArray.reduce(function (count, element) {
     //   return count + element.count;
     // }, 0);
     this.getDetails();
-
   }
   getTotal() {
     let total = 0;
@@ -82,7 +78,8 @@ export class CartListComponent implements OnInit {
     if (item.count >= 1) {
       let total = 0;
       this.cartArray.forEach(element => {
-        if (element.productID == item.productID) {
+        if (element.productID == item.productID) 
+        {
           element.count--;
           total = total + (element.price * element.count);
         }

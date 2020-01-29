@@ -7,3 +7,8 @@
     justify-content: center;
     margin-left: 52px;
 }
+@media (max-width: 400px){
+    .mycart{
+        display: none;
+    }
+}

@@ -24,7 +24,7 @@ export class DashboardComponent implements OnInit {
       this.count = this.cartData.reduce(function (count, element) {
         return count + element.count;
       }, 0);
-     console.log("dfsg",this.count);
+     console.log("cartno..",this.count);
      
     }
     console.log('...', JSON.parse(localStorage.getItem('cartCount')));
@@ -37,7 +37,7 @@ export class DashboardComponent implements OnInit {
     this.productservice.getProduct().subscribe((response: any) => {
       this.productArray = response.result;
       // this.product=this.productArray.result
-      console.log("data", this.productArray);
+      console.log("productlist", this.productArray);
     })
   }
   getDetails() {
@@ -68,17 +68,7 @@ export class DashboardComponent implements OnInit {
       return count + element.count;
     }, 0);
     this.getDetails();
-
-    // this.productservice.addToCart(item).subscribe((result: any) => {
-    //   console.log(result);
-    // });
   }
-  // cartList() {
-  //   this.productservice.getCartlist().subscribe((response: any) => {
-  //     this.count = response.length;
-  //     console.log("cart", this.count);
-  //   })
-  // }
   getTotal() {
     let total = 0;
     for (var i = 0; i < this.cartData.length; i++) {
@@ -88,4 +78,14 @@ export class DashboardComponent implements OnInit {
     console.log(this.totalamount);
     return total;
   }
+   // cartList() {
+  //   this.productservice.getCartlist().subscribe((response: any) => {
+  //     this.count = response.length;
+  //     console.log("cart", this.count);
+  //   })
+  // }
+   
+   // this.productservice.addToCart(item).subscribe((result: any) => {
+    //   console.log(result);
+    // });
 }

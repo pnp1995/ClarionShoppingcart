@@ -1,38 +1,42 @@
-<button mat-button routerLink="/dashboard" style="font-weight: bold;margin-left: 50px;background-color: cornflowerblue;">Back</button>
-<div class="mycart">  
-<p>My Cart</p>
-<div>
-<mat-card style="border: 1px solid;width: 60px;height: 45px;margin-left: 136px;">
-    <span matBadge="{{count}}"style="display: flow-root"  color="primary" >
-    <img src="../../../assets/cart.png" style="max-width: -webkit-fill-available;height: 40px;">
-    <span>
-        ${{totalamount}}
-    </span>
-    </span>
-</mat-card>
-</div>
+<button mat-button routerLink="/dashboard"
+    style="font-weight: bold;margin-left: 50px;background-color: cornflowerblue;">Back</button>
+<div class="mycart">
+    <p>My Cart</p>
+    <div>
+        <mat-card style="border: 1px solid;width: 93px;height: 82px;margin-left: 136px;">
+            <span matBadge="{{count}}" style="display: flow-root" color="primary">
+                <img src="../../../assets/cart.png" style="max-width: -webkit-fill-available;height: 40px;">
+                <span>
+                    ${{totalamount}}
+                </span>
+            </span>
+        </mat-card>
+    </div>
 </div>
 <div class="cart">
-<div *ngFor="let cart of cartArray" style="border:1px solid;display: flex;height: 200px;width: 305px;text-align: center;margin:10px">
-<div>
-    <div style="width: 112px;height: 115px;border: 1px solid;margin: 10px;">
-        <img src="{{cart.image}}" alt="NO Image" style=" font-size: 20px;width: 105px;">
+    <div *ngFor="let cart of cartArray"style="border:1px solid;display: flex;
+    height: 200px;width: 305px;text-align: center;margin:10px;">
+        <div>
+            <div style="width: 112px;height: 115px;border: 1px solid;margin: 10px;background-color: skyblue;">
+                <img *ngIf="cart.image" src="{{cart.image}}" style=" font-size: 20px;width: 112px;">
+                <div style="margin: 32px auto;font-weight: 500;font-size: 21px;width: 35%;" *ngIf="!cart.image">No Image
+                </div>
+            </div>
+            <div style="margin-top: 25px;">
+                <button mat-fab-button (click)="removeProduct(cart)">-</button>
+                <span>
+                    {{cart.count}}
+                </span>
+                <button mat-fab-button (click)="addCart(cart)">+</button>
+            </div>
+        </div>
+        <div>
+            <h4>{{cart.productName}}</h4>
+            <ul>
+                <li>Id- {{cart.productID}}</li>
+                <li>{{cart.description}}</li>
+            </ul>
+            <span style="position: absolute;margin-top: 25px;font-weight: bold;">${{cart.price}}</span>
+        </div>
     </div>
-    <div style="margin-top: 25px;">
-    <button mat-fab-button (click)="removeProduct(cart)">-</button>
-    <span>
-        {{cart.count}}
-    </span>
-    <button mat-fab-button (click)="addCart(cart)">+</button>
-   </div>
-</div>
-<div>
-<h4>{{cart.productName}}</h4>
-<ul>
-    <li>Id- {{cart.productID}}</li>
-    <li>{{cart.description}}</li>
-</ul>
-<span style="position: absolute;margin-top: 25px;font-weight: bold;">${{cart.price}}</span>
-</div>
-</div>
 </div>
