@@ -1,6 +1,6 @@
-<button mat-button routerLink="/dashboard"
-    style="font-weight: bold;margin-left: 50px;background-color: cornflowerblue;">Back</button>
-<div class="cart">
+<!-- <button mat-button routerLink="/dashboard"
+    style="font-weight: bold;margin-left: 50px; margin-top: 165px; background-color: cornflowerblue;">Back</button> -->
+<!-- <div class="cart">
     <mat-card style="border: 1px solid;margin-right: 135px; width: 90px;cursor: pointer;" routerLink="/cartlist">
         <span matBadge="{{count}}" style="display: flow-root" color="primary">
             <img src="../../../assets/cart.png" style="max-width: -webkit-fill-available;" (click)="cartList()">
@@ -9,27 +9,64 @@
             </span>
         </span>
     </mat-card>
+</div> -->
+<button mat-button routerLink="/dashboard"
+        style="font-weight: bold;margin-left: 50px; margin-top: 110px;background-color: cornflowerblue;">Back
+    </button>
+<h4 style="font-family: monospace;color: darkred;text-align: center;font-size: xx-large;">
+    View individual product 
+</h4>
+<div style="display: flex; flex-direction: column; align-items: center;margin-top: -10%;">
+    <div class="card" style="width: 50%; flex-direction: row; display: flex;margin-top: 11%;">
+        <div>
+            <img class="card-img-top" *ngIf="productidArray[0].image" src="{{productidArray[0].image}}" style=" height: fit-content;
+    width: -webkit-fill-available;">
+            <div style="border: 1px solid;height: 215px;width:230px;
+    background-color: cornflowerblue;font-weight: 600; font-size: -webkit-xxx-large;text-align-last: justify;"
+                *ngIf="!productidArray[0].image"><span style="position:absolute;top:29%"> No Image
+                </span>
+            </div>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <h5>{{productidArray[0].productName}}</h5>
+                <li>
+                    <h6> Description</h6>
+                </li>
+            </ul>
+            <p style="margin-left: 40px;"> {{productidArray[0].description}} </p>
+        </div>
+
+    </div>
+    <div style="font-weight: bold;">
+        <span style="margin-right: 60px;">${{productidArray[0].price}}</span>
+        <button  title="Add To Cart" class="btn btn-primary" mat-flat-button (click)="addCart(productidArray[0])" >+Add to
+            cart</button>
+    </div>
 </div>
-<mat-card class="fullcart">
+
+
+<!-- <mat-card class="fullcart">
     <div>
         <div class="product">
             <h4>{{productidArray[0].productName}}</h4>
             <div class="wholecart">
-                <div class="image" class="img-fluid">
-                    <img *ngIf="productidArray[0].image" src="{{productidArray[0].image}}" class="img-responsive">
+                <div class="card" style="width: 187rem;height: fit-content;              ">
+                    <img class="card-img-top" *ngIf="productidArray[0].image" src="{{productidArray[0].image}}">
                 </div>
                 <div *ngIf="!productidArray[0].image" style="border: 1px solid;width: 150px;height: 150px;">No Image
-                </div>
-                <div>
+                </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+                <div >
                     <ul>
                         <li>Id- {{productidArray[0].productID}}</li>
-                        <li *ngIf="productidArray[0].description" id="dots">
+                        <li>
                             {{productidArray[0].description | slice:0:5}}
+                            <span id="more">{{productidArray[0].description}}
+                            </span>
                         </li>
-                        <span id="more">{{productidArray[0].description}}
-                        </span>
                         <div>
-                            <button  class="btn" (click)="showMore(paasValueOn_SeeMoreBtn)">
+                            <button class="SeeMore" (click)="showMore(paasValueOn_SeeMoreBtn)">
                                 {{showLess_More}}
                             </button>
                         </div>
@@ -38,8 +75,4 @@
             </div>
         </div>
     </div>
-</mat-card>
-<div style="margin-top: 291px;margin-left: 460px;">
-    <span>${{productidArray[0].price}}</span>
-    <button mat-flat-button (click)="addCart(productidArray[0])">+Add to cart</button>
-</div>
+</mat-card> -->

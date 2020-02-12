@@ -1,18 +1,108 @@
-<button mat-button routerLink="/dashboard"
-    style="font-weight: bold;margin-left: 50px;background-color: cornflowerblue;">Back</button>
-<div class="mycart">
-    <p>My Cart</p>
-    <div>
-        <mat-card style="border: 1px solid;width: 93px;height: 82px;margin-left: 136px;">
-            <span matBadge="{{count}}" style="display: flow-root" color="primary">
-                <img src="../../../assets/cart.png" style="max-width: -webkit-fill-available;height: 40px;">
-                <span>
-                    ${{totalamount}}
-                </span>
-            </span>
-        </mat-card>
-    </div>
+<div>
+    <button mat-button routerLink="/dashboard"
+        style="font-weight: bold;margin-left: 50px; margin-top: 110px;background-color: cornflowerblue;">Back
+    </button>
+    <h4 style="color: darkred;text-align: center;font-size: xx-large;margin-top: -45px;">
+        My Cart List
+    </h4>
 </div>
+<div class="card" style="display: flex; flex-direction: column; align-items: center;">
+    <mat-card class="card shop-cart" style="width: 65vw;">    
+        <div *ngFor="let cart of cartArray" style="border:1px solid;display: flex; margin-top: 20px;">
+            <div style="display: flex; flex-direction: column;">
+             <img *ngIf="cart.image" src="{{cart.image}}" style="margin-top: 12px;"> 
+             <div style="font-weight: 800;font-size: 21px; background-color: cornflowerblue ;width: 117%;margin: 12px;height: 74%;" 
+             *ngIf="!cart.image"><span style="margin-left:17px ;">No Image</span>               
+             </div>
+            <div style="margin-inline-start: auto;margin-left: 58px;margin-top: 11px;margin-bottom: 12px;">
+                <button mat-fab-button (click)="removeProduct(cart)" title="Quantity Decrease">-</button>
+                <span>
+                    {{cart.count}}
+                </span>
+                <button mat-fab-button (click)="addCart(cart)" title="Quantity Increase">+</button>
+            </div>
+        </div>
+            <!-- <div style="font-weight: 500;font-size: 21px; background-color: cornflowerblue ;width: 35%;" 
+            *ngIf="!cart.image">No Image               
+            </div> -->
+            <div class="card-body" style="margin-left: 50px;">
+                <ul>
+                    <li>
+                        <h4>{{cart.productName}}</h4>
+                    <li>
+                        <h6> Description</h6>
+                    </li>
+                </ul>
+                <p style="margin-left: 30px;"> {{cart.description}} </p>
+                <div class="col-md-12">
+                    <div class="price-wrapper">
+                        ${{ cart.price}}
+                    </div>
+                </div>
+                <!-- <span style="position: absolute;font-weight: bold;">${{cart.price}}</span> -->
+            </div>        
+        </div>
+    </mat-card>
+</div> 
+
+
+
+ <!-- <div class="product-list-wrapper">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="image-wrapper" *ngFor="let cart of cartArray">
+                        <img *ngIf="cart.image" src="{{cart.image}}">
+                        <img src="../../../assets/images/image-not-available.png" class="noImage">
+                        <div class="btn-wrapper"></div>
+                    -->
+                    <!-- <div class="col-md-9">
+                <h2>Product Name</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div> -->
+<!--                 
+                <div class="row pt-4">
+                    <div class="col-md-3">
+                        <div class="count-wrapper">
+
+                            <button mat-fab-button (click)="removeProduct(cart)">-</button>
+                            <span>
+                                {{cart.count}}
+                            </span>
+
+                            <button mat-fab-button (click)="addCart(cart)">+</button>
+                        </div>
+                    </div>
+                    <h4>{{cart.productName}}</h4>
+                    <div class="col-md-9">
+                        <div class="price-wrapper">
+                            $400
+                        </div>
+                    </div>
+                </div>
+            </div>
+             
+            </div> -->
+
+        <!-- </div> --> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+        
 <div class="cart">
     <div *ngFor="let cart of cartArray"style="border:1px solid;display: flex;
     height: 200px;width: 305px;text-align: center;margin:10px;">
@@ -30,13 +120,13 @@
                 <button mat-fab-button (click)="addCart(cart)">+</button>
             </div>
         </div>
-        <div>
+        <div class="card-body">
             <h4>{{cart.productName}}</h4>
             <ul>
                 <li>Id- {{cart.productID}}</li>
-                <li>{{cart.description}}</li>
+                <li class="card-text">{{cart.description}}</li>
             </ul>
             <span style="position: absolute;margin-top: 25px;font-weight: bold;">${{cart.price}}</span>
         </div>
     </div>
-</div>
+</div> --> 

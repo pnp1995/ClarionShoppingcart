@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { ProductService } from 'src/app/Service/Product/product.service';
+import { DataServiceService } from 'src/app/Service/DataService/data-service.service';
+import { $ } from 'protractor';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -7,49 +9,35 @@ import { ProductService } from 'src/app/Service/Product/product.service';
 })
 export class DashboardComponent implements OnInit {
   productArray: any = [];
-  count: number = 0;
+  count: any = 0;
   cartData: any = [];
-  totalamount: number;
+  totalamount: any;
   cartArray: any;
-
-  // cart = JSON.parse(localStorage.getItem('cart'));
-
-  constructor(private productservice: ProductService) { }
+  message: string;
+  constructor(private productservice: ProductService,private dataService: DataServiceService) { }
 
   ngOnInit() {
+   
     if (JSON.parse(localStorage.getItem('cartCount'))) {
       this.cartData = JSON.parse(localStorage.getItem('cartCount'))
-      // this.count = this.cartData.length;
-
-      this.count = this.cartData.reduce(function (count, element) {
-        return count + element.count;
-      }, 0);
+    
      console.log("cartno..",this.count);
      
     }
     console.log('...', JSON.parse(localStorage.getItem('cartCount')));
     this.productList();
  //   this.cartList();
-    this.getDetails();
+    // this.getDetails();
+
   }
   productList() {
-    // alert("product list ");
+    //  alert("product list ");
     this.productservice.getProduct().subscribe((response: any) => {
       this.productArray = response.result;
-      // this.product=this.productArray.result
       console.log("productlist", this.productArray);
     })
   }
-  getDetails() {
-    if (JSON.parse(localStorage.getItem('cartCount'))) {
-      this.cartData = JSON.parse(localStorage.getItem('cartCount'))
-      //this.count = this.cartData.length;
-      this.cartArray = JSON.parse(localStorage.getItem('cartCount'))
-      this.getTotal();
-    }
-  }
   addCart(item) {
-    this.getDetails();
     var temp = true;
     this.cartData.forEach(element => {
       if (element.productID == item.productID) {
@@ -60,32 +48,11 @@ export class DashboardComponent implements OnInit {
     );
     if (temp) {
       item.count = 1;
-      this.cartData.push(item);
+      this.cartData.push(item); 
     }
     localStorage.setItem('cartCount', JSON.stringify(this.cartData));
-
-    this.count = this.cartData.reduce(function (count, element) {
-      return count + element.count;
-    }, 0);
-    this.getDetails();
+    console.log("total amount______________", this.totalamount, "Count&&&&", this.count);
+    this.dataService.changeMessage({"type":''});
   }
-  getTotal() {
-    let total = 0;
-    for (var i = 0; i < this.cartData.length; i++) {
-      total += this.cartData[i].price * this.cartData[i].count;
-      this.totalamount = total;
-    }
-    console.log(this.totalamount);
-    return total;
-  }
-   // cartList() {
-  //   this.productservice.getCartlist().subscribe((response: any) => {
-  //     this.count = response.length;
-  //     console.log("cart", this.count);
-  //   })
-  // }
-   
-   // this.productservice.addToCart(item).subscribe((result: any) => {
-    //   console.log(result);
-    // });
+  
 }

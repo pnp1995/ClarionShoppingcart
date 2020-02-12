@@ -10,13 +10,16 @@ import {MatCardModule,MatButtonModule} from '@angular/material';
 import { CartListComponent } from './Component/cart-list/cart-list.component';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatListModule} from '@angular/material/list';
+import { ShoppingcartComponent } from './Component/shoppingcart/shoppingcart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
     DashboardComponent,
-    CartListComponent
+    CartListComponent,
+    ShoppingcartComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatCardModule,
     MatButtonModule,
     MatBadgeModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

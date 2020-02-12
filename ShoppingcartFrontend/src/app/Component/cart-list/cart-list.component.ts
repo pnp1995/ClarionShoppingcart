@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/Service/Product/product.service';
+import { DataServiceService } from 'src/app/Service/DataService/data-service.service';
 @Component({
   selector: 'app-cart-list',
   templateUrl: './cart-list.component.html',
@@ -8,43 +9,34 @@ import { ProductService } from 'src/app/Service/Product/product.service';
 export class CartListComponent implements OnInit {
   cartArray: any = [];
   cart: any = [];
-  // increment: number;
-  // decrement: number;
   counter: number = 0;
   count: number = 0;
   totalamount: number;
 
-  constructor(private productservice: ProductService) { }
+  constructor(private productservice: ProductService, private dataService: DataServiceService) { }
 
   ngOnInit() {
-    // this.cartList();
-    this.getDetails();
+     this.getDetails();
+    this.dataService.currentMessage.subscribe((response: any) => {
+      console.log("cartlistresponse", response);
+
+      console.log("total amount______________", this.totalamount, "Count&&&&", this.count);
+
+    })
+
     console.log('cartlist...', JSON.parse(localStorage.getItem('cartCount')));
+
   }
-  getDetails() {
+   getDetails() {
     if (JSON.parse(localStorage.getItem('cartCount'))) {
-      // this.cartArray = JSON.parse(localStorage.getItem('cartCount'))
-      console.log("gasdf", this.cartArray);
       this.cartArray = JSON.parse(localStorage.getItem('cartCount'));
       this.count = this.cartArray.length;
       console.log(this.cartArray);
-      
-      this.cartArray.forEach(element => {
-        if (element.count === 0) {
-          console.log(element);
-          let i = this.cartArray.findIndex(cart => cart.productName = element.productName);
-          if (i !== 0) {
-            this.cartArray.pop(i, 1);
-            localStorage.setItem('cartCount', JSON.stringify(this.cartArray));
-          }
-
-        }
-      });
-
       console.log('aaaaa', this.cartArray);
       this.getTotal();
 
     }
+
   }
   addCart(item) {
     var temp = true;
@@ -63,7 +55,9 @@ export class CartListComponent implements OnInit {
     // this.count = this.cartArray.reduce(function (count, element) {
     //   return count + element.count;
     // }, 0);
-    this.getDetails();
+     this.getDetails();
+    this.dataService.changeMessage({ "gsdg": 'asdfsdfsd' });
+
   }
   getTotal() {
     let total = 0;
@@ -74,12 +68,11 @@ export class CartListComponent implements OnInit {
     return total;
   }
   removeProduct(item) {
-    console.log(item.count, item);
+    console.log('remove item count and item', item.count, item);
     if (item.count >= 1) {
       let total = 0;
       this.cartArray.forEach(element => {
-        if (element.productID == item.productID) 
-        {
+        if (element.productID == item.productID) {
           element.count--;
           total = total + (element.price * element.count);
         }
@@ -89,42 +82,18 @@ export class CartListComponent implements OnInit {
         var index = this.cartArray.map(function (e) { return e.productID; }).indexOf(item.productID);
         this.cartArray.splice(index, 1);
         localStorage.setItem('cartCount', JSON.stringify(this.cartArray));
-        this.getDetails();
+         this.getDetails();
       }
+      localStorage.setItem('cartCount', JSON.stringify(this.cartArray));
     }
-     this.getTotal();
+    this.getTotal();
+    console.log("total amount after remove the product ______________", this.totalamount, "Count&&&&", this.count);
+    this.dataService.changeMessage({
+      "removedata": {
+        "total_amount": this.totalamount,
+        "count": this.count
+      }
+    });
 
-    // if (item.count > 1) {
-    //   var temp = true;
-    //   this.cartArray.forEach(element => {
-    //     if (element.productID == item.productID) {
-    //       element.count = element.count - 1;
-    //       console.log("gnjdgg...", element);
-    //       temp = false
-    //     }
-    //   }
-    //   );
-    //   // if (temp) {
-    //   //   item.count = 0;
-    //   //   this.cartArray.pop(item);
-    //   // }
-    //   localStorage.setItem('cartCount', JSON.stringify(this.cartArray));
-    //   this.getTotal();
-
-    //   this.getDetails();
-
-    // }
-    // else {
-
-    //   this.cartArray = this.cartArray.filter(el => {
-    //         return el.productID != item.productID;
-    //   });
-    //   localStorage.setItem('cartCount', JSON.stringify(this.cartArray));
-    //   this.getDetails();
-
-    // }
-    // this.count = this.cartArray.reduce(function (count, element) {
-    //   return count + element.count;
-    // }, 0);
   }
 }
